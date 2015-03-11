@@ -1,0 +1,3 @@
+#! /bin/sh
+gcc -o bin/PutFFI.exe ./PutFFI.c -llibffi -Llib
+./bin/PutFFI.exe

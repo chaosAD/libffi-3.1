@@ -64,7 +64,7 @@ extern "C" {
 
 /* ---- System configuration information --------------------------------- */
 
-#include <ffitarget.h>
+#include "ffitarget.h"
 
 #ifndef LIBFFI_ASM
 
@@ -434,7 +434,8 @@ ffi_status ffi_prep_cif_var(ffi_cif *cif,
 			    ffi_type **atypes);
 
 void ffi_call(ffi_cif *cif,
-	      void (*fn)(void),
+//	      void (*fn)(void),
+        int (__attribute__((__cdecl__)) *fn)(const char *),
 	      void *rvalue,
 	      void **avalue);
 
