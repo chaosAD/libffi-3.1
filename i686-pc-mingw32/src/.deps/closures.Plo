@@ -1,0 +1,115 @@
+src/closures.lo src/closures.o: ../src/closures.c include/ffi.h \
+  include/ffitarget.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/limits.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/_mingw.h \
+  ../include/ffi_common.h ./fficonfig.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/string.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/sys/types.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/sys/stat.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/fcntl.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/io.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/errno.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/unistd.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/process.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdint.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/getopt.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdarg.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/include/stdarg.h ../src/dlmalloc.c \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/windows.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/windef.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winnt.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winerror.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/basetsd.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/pshpack4.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/poppack.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/wincon.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winbase.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/wingdi.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winuser.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winnls.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winver.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winnetwk.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winreg.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winsvc.h \
+  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h
+
+include/ffi.h:
+
+include/ffitarget.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/limits.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/_mingw.h:
+
+../include/ffi_common.h:
+
+./fficonfig.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/string.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/sys/types.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/sys/stat.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/fcntl.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/io.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/errno.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/unistd.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/process.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdint.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/getopt.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdio.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdarg.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/include/stdarg.h:
+
+../src/dlmalloc.c:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/windows.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/windef.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winnt.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winerror.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/basetsd.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/pshpack4.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/poppack.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/wincon.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winbase.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/wingdi.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winuser.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winnls.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winver.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winnetwk.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winreg.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/winsvc.h:
+
+d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h:
