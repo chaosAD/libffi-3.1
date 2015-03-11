@@ -13,7 +13,7 @@
 /* #undef C_ALLOCA */
 
 /* Define to the flags needed for the .section .eh_frame directive. */
-#define EH_FRAME_FLAGS "aw"
+#define EH_FRAME_FLAGS "a"
 
 /* Define this if you want extra debugging. */
 /* #undef FFI_DEBUG */
@@ -96,7 +96,7 @@
 /* #undef HAVE_MMAP_FILE */
 
 /* Define if .eh_frame sections should be read-only. */
-/* #undef HAVE_RO_EH_FRAME */
+#define HAVE_RO_EH_FRAME 1
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #define HAVE_STDINT_H 1

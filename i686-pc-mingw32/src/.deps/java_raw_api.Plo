@@ -1,29 +1,23 @@
-src/java_raw_api.lo src/java_raw_api.o: ../src/java_raw_api.c \
-  include/ffi.h include/ffitarget.h \
-  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h \
-  d:/usr/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h \
-  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/limits.h \
-  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/_mingw.h \
-  ../include/ffi_common.h ./fficonfig.h \
-  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/string.h \
-  d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h
+src/java_raw_api.lo: ../src/java_raw_api.c include/ffi.h \
+ include/ffitarget.h c:\mingw\lib\gcc\mingw32\4.8.1\include\stddef.h \
+ c:\mingw\include\limits.h c:\mingw\include\_mingw.h \
+ ../include/ffi_common.h fficonfig.h c:\mingw\include\string.h \
+ c:\mingw\include\stdlib.h
 
 include/ffi.h:
 
 include/ffitarget.h:
 
-d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stddef.h:
+c:\mingw\lib\gcc\mingw32\4.8.1\include\stddef.h:
 
-d:/usr/bin/../lib/gcc/mingw32/3.4.2/include/stddef.h:
+c:\mingw\include\limits.h:
 
-d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/limits.h:
-
-d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/_mingw.h:
+c:\mingw\include\_mingw.h:
 
 ../include/ffi_common.h:
 
-./fficonfig.h:
+fficonfig.h:
 
-d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/string.h:
+c:\mingw\include\string.h:
 
-d:/usr/bin/../lib/gcc/mingw32/3.4.2/../../../../include/stdlib.h:
+c:\mingw\include\stdlib.h:

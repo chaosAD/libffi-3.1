@@ -1,2 +1,2 @@
-set CC_FOR_TARGET "gcc"
-set CXX_FOR_TARGET "g++"
+set CC_FOR_TARGET "/C/MinGW/bin/gcc.exe"
+set CXX_FOR_TARGET "/C/MinGW/bin/g++.exe"

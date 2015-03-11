@@ -1,0 +1,216 @@
+HOST="" \
+; test ".$HOST" = "." && HOST=` sh /d/gnu/libffi-3.1/config.guess ` \
+; BUILD=` grep "^#### $HOST " Makefile | sed -e 's/.*|//' ` \
+; use=` basename "install" -all `; n=` echo $BUILD | wc -w ` \
+; echo "MAKE $HOST : $n * install"; if test "$n" -eq "0" ; then : \
+; BUILD=` grep "^####.*|" Makefile |tail -1| sed -e 's/.*|//' ` ; fi \
+; test ".$BUILD" = "." && BUILD="." \
+; test "$use" = "install" && BUILD=` echo "$BUILD" | tail -1 ` \
+; for i in $BUILD ; do test ".$i" = "." && continue \
+; (cd "$i" && test ! -f configure && c:/mingw/bin/make $use) || exit; done
+MAKE  :       1 * install
+make[1]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32'
+fail=; \
+if (target_option=k; case ${target_option-} in ?) ;; *) echo "am__make_running_with_option: internal error: invalid" "target option '${target_option-}' specified" >&2; exit 1;; esac; has_opt=no; sane_makeflags=$MAKEFLAGS; if test -n ' Makefile src/.deps/closures.Plo src/.deps/debug.Plo src/.deps/java_raw_api.Plo src/.deps/prep_cif.Plo src/.deps/raw_api.Plo src/.deps/types.Plo src/aarch64/.deps/ffi.Plo src/aarch64/.deps/sysv.Plo src/alpha/.deps/ffi.Plo src/alpha/.deps/osf.Plo src/arc/.deps/arcompact.Plo src/arc/.deps/ffi.Plo src/arm/.deps/ffi.Plo src/arm/.deps/sysv.Plo src/arm/.deps/trampoline.Plo src/avr32/.deps/ffi.Plo src/avr32/.deps/sysv.Plo src/bfin/.deps/ffi.Plo src/bfin/.deps/sysv.Plo src/cris/.deps/ffi.Plo src/cris/.deps/sysv.Plo src/frv/.deps/eabi.Plo src/frv/.deps/ffi.Plo src/ia64/.deps/ffi.Plo src/ia64/.deps/unix.Plo src/m32r/.deps/ffi.Plo src/m32r/.deps/sysv.Plo src/m68k/.deps/ffi.Plo src/m68k/.deps/sysv.Plo src/m88k/.deps/ffi.Plo src/m88k/.deps/obsd.Plo src/metag/.deps/ffi.Plo src/metag/.deps/sysv.Plo src/microblaze/.deps/ffi.Plo src/microblaze/.deps/sysv.Plo src/mips/.deps/ffi.Plo src/mips/.deps/n32.Plo src/mips/.deps/o32.Plo src/moxie/.deps/eabi.Plo src/moxie/.deps/ffi.Plo src/nios2/.deps/ffi.Plo src/nios2/.deps/sysv.Plo src/pa/.deps/ffi.Plo src/pa/.deps/hpux32.Plo src/pa/.deps/linux.Plo src/powerpc/.deps/aix.Plo src/powerpc/.deps/aix_closure.Plo src/powerpc/.deps/darwin.Plo src/powerpc/.deps/darwin_closure.Plo src/powerpc/.deps/ffi.Plo src/powerpc/.deps/ffi_darwin.Plo src/powerpc/.deps/ffi_linux64.Plo src/powerpc/.deps/ffi_sysv.Plo src/powerpc/.deps/linux64.Plo src/powerpc/.deps/linux64_closure.Plo src/powerpc/.deps/ppc_closure.Plo src/powerpc/.deps/sysv.Plo src/s390/.deps/ffi.Plo src/s390/.deps/sysv.Plo src/sh/.deps/ffi.Plo src/sh/.deps/sysv.Plo src/sh64/.deps/ffi.Plo src/sh64/.deps/sysv.Plo src/sparc/.deps/ffi.Plo src/sparc/.deps/v8.Plo src/sparc/.deps/v9.Plo src/tile/.deps/ffi.Plo src/tile/.deps/tile.Plo src/vax/.deps/elfbsd.Plo src/vax/.deps/ffi.Plo src/x86/.deps/darwin.Plo src/x86/.deps/darwin64.Plo src/x86/.deps/ffi.Plo src/x86/.deps/ffi64.Plo src/x86/.deps/freebsd.Plo src/x86/.deps/sysv.Plo src/x86/.deps/unix64.Plo src/x86/.deps/win32.Plo src/x86/.deps/win64.Plo src/xtensa/.deps/ffi.Plo src/xtensa/.deps/sysv.Plo' && test -n '1'; then sane_makeflags=$MFLAGS; else case $MAKEFLAGS in *\\[\ \	]*) bs=\\; sane_makeflags=`printf '%s\n' "$MAKEFLAGS" | sed "s/$bs$bs[$bs $bs	]*//g"`;; esac; fi; skip_next=no; strip_trailopt () { flg=`printf '%s\n' "$flg" | sed "s/$1.*$//"`; }; for flg in $sane_makeflags; do test $skip_next = yes && { skip_next=no; continue; }; case $flg in *=*|--*) continue;; -*I) strip_trailopt 'I'; skip_next=yes;; -*I?*) strip_trailopt 'I';; -*O) strip_trailopt 'O'; skip_next=yes;; -*O?*) strip_trailopt 'O';; -*l) strip_trailopt 'l'; skip_next=yes;; -*l?*) strip_trailopt 'l';; -[dEDm]) skip_next=yes;; -[JT]) skip_next=yes;; esac; case $flg in *$target_option*) has_opt=yes; break;; esac; done; test $has_opt = yes); then \
+  failcom='fail=yes'; \
+else \
+  failcom='exit 1'; \
+fi; \
+dot_seen=no; \
+target=`echo install-recursive | sed s/-recursive//`; \
+case "install-recursive" in \
+  distclean-* | maintainer-clean-*) list='include testsuite man' ;; \
+  *) list='include testsuite man' ;; \
+esac; \
+for subdir in $list; do \
+  echo "Making $target in $subdir"; \
+  if test "$subdir" = "."; then \
+    dot_seen=yes; \
+    local_target="$target-am"; \
+  else \
+    local_target="$target"; \
+  fi; \
+  (CDPATH="${ZSH_VERSION+.}:" && cd $subdir && c:/mingw/bin/make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions' 'CXXFLAGS=-g -O2' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=../install-sh -c' 'INSTALL_DATA=../install-sh -c -m 644' 'INSTALL_PROGRAM=../install-sh -c' 'INSTALL_SCRIPT=../install-sh -c' 'JC1FLAGS=' 'LDFLAGS=' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=c:/mingw/bin/make' 'MAKEINFO=C:/ProgramFiles_x86/Git/bin/sh.exe /C/Vennie/Projects/C/trash/libffi-3.1/missing makeinfo ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=C:/ProgramFiles_x86/Git/bin/sh.exe' 'exec_prefix=/C/Vennie/Projects/C/libffi-3.1/result' 'infodir=/C/Vennie/Projects/C/libffi-3.1/result/share/info' 'libdir=/C/Vennie/Projects/C/libffi-3.1/result/lib' 'mandir=/C/Vennie/Projects/C/libffi-3.1/result/share/man' 'prefix=/C/Vennie/Projects/C/libffi-3.1/result' 'AR=ar' 'AS=as' 'CC=/C/MinGW/bin/gcc.exe' 'CXX=/C/MinGW/bin/g++.exe' 'LD=c:/mingw/mingw32/bin/ld.exe' 'NM=/c/mingw/bin/nm' 'RANLIB=ranlib' 'DESTDIR=' $local_target) \
+  || eval $failcom; \
+done; \
+if test "$dot_seen" = "no"; then \
+  c:/mingw/bin/make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions' 'CXXFLAGS=-g -O2' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=../install-sh -c' 'INSTALL_DATA=../install-sh -c -m 644' 'INSTALL_PROGRAM=../install-sh -c' 'INSTALL_SCRIPT=../install-sh -c' 'JC1FLAGS=' 'LDFLAGS=' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=c:/mingw/bin/make' 'MAKEINFO=C:/ProgramFiles_x86/Git/bin/sh.exe /C/Vennie/Projects/C/trash/libffi-3.1/missing makeinfo ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=C:/ProgramFiles_x86/Git/bin/sh.exe' 'exec_prefix=/C/Vennie/Projects/C/libffi-3.1/result' 'infodir=/C/Vennie/Projects/C/libffi-3.1/result/share/info' 'libdir=/C/Vennie/Projects/C/libffi-3.1/result/lib' 'mandir=/C/Vennie/Projects/C/libffi-3.1/result/share/man' 'prefix=/C/Vennie/Projects/C/libffi-3.1/result' 'AR=ar' 'AS=as' 'CC=/C/MinGW/bin/gcc.exe' 'CXX=/C/MinGW/bin/g++.exe' 'LD=c:/mingw/mingw32/bin/ld.exe' 'NM=/c/mingw/bin/nm' 'RANLIB=ranlib' 'DESTDIR=' "$target-am" || exit 1; \
+fi; test -z "$fail"
+Making install in include
+make[2]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/include'
+c:/mingw/bin/make  install-exec-am install-data-am
+make[3]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+:
+list='ffi.h ffitarget.h'; test -n "c:/Vennie/Projects/C/libffi-3.1/result/lib/libffi-3.1/include" || list=; \
+if test -n "$list"; then \
+  echo " /bin/mkdir -p 'c:/Vennie/Projects/C/libffi-3.1/result/lib/libffi-3.1/include'"; \
+  /bin/mkdir -p "c:/Vennie/Projects/C/libffi-3.1/result/lib/libffi-3.1/include" || exit 1; \
+fi; \
+for p in $list; do \
+  if test -f "$p"; then d=; else d="../../include/"; fi; \
+  echo "$d$p"; \
+done | sed '$!N;$!N;$!N;$!N;$!N;$!N;$!N;s/\n/ /g' | sed '$!N;$!N;$!N;$!N;s/\n/ /g' | \
+while read files; do \
+  echo " ../install-sh -c -m 644 $files 'c:/Vennie/Projects/C/libffi-3.1/result/lib/libffi-3.1/include'"; \
+  ../install-sh -c -m 644 $files "c:/Vennie/Projects/C/libffi-3.1/result/lib/libffi-3.1/include" || exit $?; \
+done
+make[3]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/include'
+make[2]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/include'
+Making install in testsuite
+make[2]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/testsuite'
+c:/mingw/bin/make  install-exec-am install-data-am
+make[3]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/testsuite'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/testsuite'
+make[2]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/testsuite'
+Making install in man
+make[2]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/man'
+c:/mingw/bin/make  install-exec-am install-data-am
+make[3]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/man'
+make[3]: Nothing to be done for 'install-exec-am'.
+:
+list1=''; \
+list2='ffi.3 ffi_call.3 ffi_prep_cif.3 ffi_prep_cif_var.3'; \
+test -n "c:/Vennie/Projects/C/libffi-3.1/result/share/man/man3" \
+  && test -n "`echo $list1$list2`" \
+  || exit 0; \
+echo " /bin/mkdir -p 'c:/Vennie/Projects/C/libffi-3.1/result/share/man/man3'"; \
+/bin/mkdir -p "c:/Vennie/Projects/C/libffi-3.1/result/share/man/man3" || exit 1; \
+{ for i in $list1; do echo "$i"; done;  \
+if test -n "$list2"; then \
+  for i in $list2; do echo "$i"; done \
+    | sed -n '/\.3[a-z]*$/p'; \
+fi; \
+} | while read p; do \
+  if test -f $p; then d=; else d="../../man/"; fi; \
+  echo "$d$p"; echo "$p"; \
+done | \
+sed -e 'n;s,.*/,,;p;h;s,.*\.,,;s,^[^3][0-9a-z]*$,3,;x' \
+      -e 's,\.[0-9a-z]*$,,;s,x,x,;G;s,\n,.,' | \
+sed 'N;N;s,\n, ,g' | { \
+list=; while read file base inst; do \
+  if test "$base" = "$inst"; then list="$list $file"; else \
+    echo " ../install-sh -c -m 644 '$file' 'c:/Vennie/Projects/C/libffi-3.1/result/share/man/man3/$inst'"; \
+    ../install-sh -c -m 644 "$file" "c:/Vennie/Projects/C/libffi-3.1/result/share/man/man3/$inst" || exit $?; \
+  fi; \
+done; \
+for i in $list; do echo "$i"; done | sed '$!N;$!N;$!N;$!N;$!N;$!N;$!N;s/\n/ /g' | sed '$!N;$!N;$!N;$!N;s/\n/ /g' | \
+while read files; do \
+  test -z "$files" || { \
+    echo " ../install-sh -c -m 644 $files 'c:/Vennie/Projects/C/libffi-3.1/result/share/man/man3'"; \
+    ../install-sh -c -m 644 $files "c:/Vennie/Projects/C/libffi-3.1/result/share/man/man3" || exit $?; }; \
+done; }
+make[3]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/man'
+make[2]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32/man'
+make[2]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32'
+depbase=`echo src/prep_cif.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/prep_cif.lo -MD -MP -MF $depbase.Tpo -c -o src/prep_cif.lo ../src/prep_cif.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/types.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/types.lo -MD -MP -MF $depbase.Tpo -c -o src/types.lo ../src/types.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/raw_api.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/raw_api.lo -MD -MP -MF $depbase.Tpo -c -o src/raw_api.lo ../src/raw_api.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/java_raw_api.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/java_raw_api.lo -MD -MP -MF $depbase.Tpo -c -o src/java_raw_api.lo ../src/java_raw_api.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/closures.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/closures.lo -MD -MP -MF $depbase.Tpo -c -o src/closures.lo ../src/closures.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/x86/ffi.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/x86/ffi.lo -MD -MP -MF $depbase.Tpo -c -o src/x86/ffi.lo ../src/x86/ffi.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/x86/win32.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool    --mode=compile /C/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src  -I. -I../include -Iinclude -I../src  -MT src/x86/win32.lo -MD -MP -MF $depbase.Tpo -c -o src/x86/win32.lo ../src/x86/win32.S &&\
+mv -f $depbase.Tpo $depbase.Plo
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=link c:/MinGW/bin/gcc.exe  -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions   -o libffi_convenience.la  src/prep_cif.lo src/types.lo src/raw_api.lo src/java_raw_api.lo src/closures.lo      src/x86/ffi.lo src/x86/win32.lo                                   
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=link c:/MinGW/bin/gcc.exe  -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -no-undefined -version-info `grep -v '^#' ../libtool-version`  -no-undefined -bindir "c:/Vennie/Projects/C/libffi-3.1/result/bin"  -o libffi.la -rpath c:/Vennie/Projects/C/libffi-3.1/result/lib src/prep_cif.lo src/types.lo src/raw_api.lo src/java_raw_api.lo src/closures.lo      src/x86/ffi.lo src/x86/win32.lo                                   
+c:/mingw/bin/make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions' 'CXXFLAGS=-g -O2' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=../install-sh -c' 'INSTALL_DATA=../install-sh -c -m 644' 'INSTALL_PROGRAM=../install-sh -c' 'INSTALL_SCRIPT=../install-sh -c' 'JC1FLAGS=' 'LDFLAGS=' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=c:/mingw/bin/make' 'MAKEINFO=C:/ProgramFiles_x86/Git/bin/sh.exe /C/Vennie/Projects/C/trash/libffi-3.1/missing makeinfo  ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=C:/ProgramFiles_x86/Git/bin/sh.exe' 'exec_prefix=c:/Vennie/Projects/C/libffi-3.1/result' 'infodir=c:/Vennie/Projects/C/libffi-3.1/result/share/info' 'libdir=c:/Vennie/Projects/C/libffi-3.1/result/lib' 'mandir=c:/Vennie/Projects/C/libffi-3.1/result/share/man' 'prefix=c:/Vennie/Projects/C/libffi-3.1/result' 'AR=ar' 'AS=as' 'CC=c:/MinGW/bin/gcc.exe' 'CXX=c:/MinGW/bin/g++.exe' 'LD=c:/mingw/mingw32/bin/ld.exe' 'NM=c:/mingw/bin/nm' 'RANLIB=ranlib' 'DESTDIR=' install-exec-am install-data-am
+make[3]: Entering directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32'
+depbase=`echo src/prep_cif.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/prep_cif.lo -MD -MP -MF $depbase.Tpo -c -o src/prep_cif.lo ../src/prep_cif.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/types.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/types.lo -MD -MP -MF $depbase.Tpo -c -o src/types.lo ../src/types.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/raw_api.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/raw_api.lo -MD -MP -MF $depbase.Tpo -c -o src/raw_api.lo ../src/raw_api.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/java_raw_api.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/java_raw_api.lo -MD -MP -MF $depbase.Tpo -c -o src/java_raw_api.lo ../src/java_raw_api.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/closures.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/closures.lo -MD -MP -MF $depbase.Tpo -c -o src/closures.lo ../src/closures.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/x86/ffi.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=compile c:/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src   -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -MT src/x86/ffi.lo -MD -MP -MF $depbase.Tpo -c -o src/x86/ffi.lo ../src/x86/ffi.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo src/x86/win32.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool    --mode=compile /C/MinGW/bin/gcc.exe -DHAVE_CONFIG_H -I. -I..  -I. -I../include -Iinclude -I../src  -I. -I../include -Iinclude -I../src  -MT src/x86/win32.lo -MD -MP -MF $depbase.Tpo -c -o src/x86/win32.lo ../src/x86/win32.S &&\
+mv -f $depbase.Tpo $depbase.Plo
+C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=link c:/MinGW/bin/gcc.exe  -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -no-undefined -version-info `grep -v '^#' ../libtool-version`  -no-undefined -bindir "c:/Vennie/Projects/C/libffi-3.1/result/bin"  -o libffi.la -rpath c:/Vennie/Projects/C/libffi-3.1/result/lib src/prep_cif.lo src/types.lo src/raw_api.lo src/java_raw_api.lo src/closures.lo      src/x86/ffi.lo src/x86/win32.lo                                   
+:
+list='libffi.la'; test -n "c:/Vennie/Projects/C/libffi-3.1/result/lib" || list=; \
+list2=; for p in $list; do \
+  if test -f $p; then \
+    list2="$list2 $p"; \
+  else :; fi; \
+done; \
+test -z "$list2" || { \
+  echo " /bin/mkdir -p 'c:/Vennie/Projects/C/libffi-3.1/result/lib'"; \
+  /bin/mkdir -p "c:/Vennie/Projects/C/libffi-3.1/result/lib" || exit 1; \
+  echo " C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool   --mode=install ../install-sh -c  $list2 'c:/Vennie/Projects/C/libffi-3.1/result/lib'"; \
+  C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool   --mode=install ../install-sh -c  $list2 "c:/Vennie/Projects/C/libffi-3.1/result/lib"; \
+}
+:
+srcdirstrip=`echo ".." | sed 's|.|.|g'`; \
+list='../doc/libffi.info'; test -n "c:/Vennie/Projects/C/libffi-3.1/result/share/info" || list=; \
+if test -n "$list"; then \
+  echo " /bin/mkdir -p 'c:/Vennie/Projects/C/libffi-3.1/result/share/info'"; \
+  /bin/mkdir -p "c:/Vennie/Projects/C/libffi-3.1/result/share/info" || exit 1; \
+fi; \
+for file in $list; do \
+  case $file in \
+    ../*) file=`echo "$file" | sed "s|^$srcdirstrip/||"`;; \
+  esac; \
+  if test -f $file; then d=.; else d=..; fi; \
+  file_i=`echo "$file" | sed 's|\.info$||;s|$|.i|'`; \
+  for ifile in $d/$file $d/$file-[0-9] $d/$file-[0-9][0-9] \
+               $d/$file_i[0-9] $d/$file_i[0-9][0-9] ; do \
+    if test -f $ifile; then \
+      echo "$ifile"; \
+    else : ; fi; \
+  done; \
+done | sed '$!N;$!N;$!N;$!N;$!N;$!N;$!N;s/\n/ /g' | sed '$!N;$!N;$!N;$!N;s/\n/ /g' | \
+while read files; do \
+  echo " ../install-sh -c -m 644 $files 'c:/Vennie/Projects/C/libffi-3.1/result/share/info'"; \
+  ../install-sh -c -m 644 $files "c:/Vennie/Projects/C/libffi-3.1/result/share/info" || exit $?; done
+:
+if case $AM_UPDATE_INFO_DIR in n|no|NO) false;; *) (install-info --version) >/dev/null 2>&1;; esac; then \
+  list='../doc/libffi.info'; test -n "c:/Vennie/Projects/C/libffi-3.1/result/share/info" || list=; \
+  for file in $list; do \
+    relfile=`echo "$file" | sed 's|^.*/||'`; \
+    echo " install-info --info-dir='c:/Vennie/Projects/C/libffi-3.1/result/share/info' 'c:/Vennie/Projects/C/libffi-3.1/result/share/info/$relfile'";\
+    install-info --info-dir="c:/Vennie/Projects/C/libffi-3.1/result/share/info" "c:/Vennie/Projects/C/libffi-3.1/result/share/info/$relfile" || :;\
+  done; \
+else : ; fi
+:
+list='libffi.pc'; test -n "c:/Vennie/Projects/C/libffi-3.1/result/lib/pkgconfig" || list=; \
+if test -n "$list"; then \
+  echo " /bin/mkdir -p 'c:/Vennie/Projects/C/libffi-3.1/result/lib/pkgconfig'"; \
+  /bin/mkdir -p "c:/Vennie/Projects/C/libffi-3.1/result/lib/pkgconfig" || exit 1; \
+fi; \
+for p in $list; do \
+  if test -f "$p"; then d=; else d="../"; fi; \
+  echo "$d$p"; \
+done | sed '$!N;$!N;$!N;$!N;$!N;$!N;$!N;s/\n/ /g' | sed '$!N;$!N;$!N;$!N;s/\n/ /g' | \
+while read files; do \
+  echo " ../install-sh -c -m 644 $files 'c:/Vennie/Projects/C/libffi-3.1/result/lib/pkgconfig'"; \
+  ../install-sh -c -m 644 $files "c:/Vennie/Projects/C/libffi-3.1/result/lib/pkgconfig" || exit $?; \
+done
+make[3]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32'
+make[2]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32'
+make[1]: Leaving directory 'c:/Vennie/Projects/C/trash/libffi-3.1/i686-pc-mingw32'

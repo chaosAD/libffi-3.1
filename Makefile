@@ -3642,4 +3642,5 @@ dist-hook dist-hook-all:
 	; do test -f "$$f" && mv "$$f" $(PUB). ; done ; break ; done
 
 #### CONFIGURATIONS FOR TOPLEVEL MAKEFILE: 
+#### ...... i686-pc-mingw32
 ####  |i686-pc-mingw32
