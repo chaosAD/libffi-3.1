@@ -770,7 +770,7 @@ configure:16496: /C/MinGW/bin/gcc.exe -o conftest.exe -O3 -fomit-frame-pointer -
 configure:16496: $? = 0
 configure:16496: ./conftest.exe
 configure:16496: $? = 0
-configure:16506: result: 306a9:4100800:7fbae3ff:bfebfbff
+configure:16506: result: 306a9:6100800:7fbae3ff:bfebfbff
 configure:16730: checking whether C compiler accepts -march=core2
 configure:16749: /C/MinGW/bin/gcc.exe -c -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math  -march=core2  conftest.c >&5
 configure:16749: $? = 0
@@ -929,7 +929,7 @@ configure:16981: checking for sys/mman.h
 configure:16981: result: no
 configure:16993: checking for mmap
 configure:16993: /C/MinGW/bin/gcc.exe -o conftest.exe -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions   conftest.c  >&5
-C:\Users\user26\AppData\Local\Temp\ccSP4kvL.o:conftest.c:(.text.startup+0xc): undefined reference to `mmap'
+C:\Users\user26\AppData\Local\Temp\cc2taL8k.o:conftest.c:(.text.startup+0xc): undefined reference to `mmap'
 collect2.exe: error: ld returned 1 exit status
 configure:16993: $? = 1
 configure: failed program was:
@@ -1300,6 +1300,7 @@ config.status:1306: creating testsuite/Makefile
 config.status:1306: creating man/Makefile
 config.status:1306: creating libffi.pc
 config.status:1306: creating fficonfig.h
+config.status:1472: fficonfig.h is unchanged
 config.status:1532: linking ../src/x86/ffitarget.h to include/ffitarget.h
 config.status:1551: executing buildir commands
 config.status:1691: reusing top_srcdir/Makefile from earlier configure
@@ -1392,7 +1393,7 @@ ax_cv_check_cflags___fstrict_aliasing=yes
 ax_cv_check_cflags___march_core2=yes
 ax_cv_gcc_archflag=-march=core2
 ax_cv_gcc_x86_cpuid_0=d:756e6547:6c65746e:49656e69
-ax_cv_gcc_x86_cpuid_1=306a9:4100800:7fbae3ff:bfebfbff
+ax_cv_gcc_x86_cpuid_1=306a9:6100800:7fbae3ff:bfebfbff
 gcc_cv_as_cfi_pseudo_op=yes
 libffi_cv_as_ascii_pseudo_op=yes
 libffi_cv_as_string_pseudo_op=yes
@@ -1439,7 +1440,7 @@ lt_cv_to_tool_file_cmd=func_convert_file_msys_to_w32
 
 AARCH64_FALSE=''
 AARCH64_TRUE='#'
-ACLOCAL='${SHELL} /C/Vennie/Projects/C/trash/libffi-3.1/missing aclocal-1.13'
+ACLOCAL='${SHELL} /C/Vennie/Projects/C/libffi-3.1/missing aclocal-1.13'
 ALLOCA=''
 ALPHA_FALSE=''
 ALPHA_TRUE='#'
@@ -1458,9 +1459,9 @@ ARC_FALSE=''
 ARC_TRUE='#'
 ARM_FALSE=''
 ARM_TRUE='#'
-AUTOCONF='${SHELL} /C/Vennie/Projects/C/trash/libffi-3.1/missing autoconf'
-AUTOHEADER='${SHELL} /C/Vennie/Projects/C/trash/libffi-3.1/missing autoheader'
-AUTOMAKE='${SHELL} /C/Vennie/Projects/C/trash/libffi-3.1/missing automake-1.13'
+AUTOCONF='${SHELL} /C/Vennie/Projects/C/libffi-3.1/missing autoconf'
+AUTOHEADER='${SHELL} /C/Vennie/Projects/C/libffi-3.1/missing autoheader'
+AUTOMAKE='${SHELL} /C/Vennie/Projects/C/libffi-3.1/missing automake-1.13'
 AVR32_FALSE=''
 AVR32_TRUE='#'
 AWK='gawk'
@@ -1525,7 +1526,7 @@ M88K_TRUE='#'
 MAINT='#'
 MAINTAINER_MODE_FALSE=''
 MAINTAINER_MODE_TRUE='#'
-MAKEINFO='${SHELL} /C/Vennie/Projects/C/trash/libffi-3.1/missing makeinfo'
+MAKEINFO='${SHELL} /C/Vennie/Projects/C/libffi-3.1/missing makeinfo'
 MANIFEST_TOOL=':'
 METAG_FALSE=''
 METAG_TRUE='#'
@@ -1646,7 +1647,7 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /C/Vennie/Projects/C/trash/libffi-3.1/install-sh'
+install_sh='${SHELL} /C/Vennie/Projects/C/libffi-3.1/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'

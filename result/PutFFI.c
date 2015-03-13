@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "lib/libffi-3.1/include/ffi.h"
+#include <ffi.h>
 
 int main() {
   ffi_cif cif;

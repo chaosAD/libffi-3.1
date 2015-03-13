@@ -23,21 +23,23 @@ break the process. Now if you issue "make install" again it will complain
   make install
 
 To overcome the "make install" freezing problem, you can run step-by-step
-what "make" would have done. But, the "makefile" is too cyptic! What can be done
-is run the make install in dry-run mode, which means running but not executing.
-This avoids the freezing and it will dump all commands to build the library:
+what "make" would have done. But, the "makefile" is too cyptic! What can be
+done is to run the make install in dry-run mode, which means running but not
+executing. This avoids the freezing and it will dump all commands to build
+the library:
   make clean
   make install --dry-run > build.log
   make install
 
-The last step above is to really "make install". Then Crtl-C to break out from
-the process. Open the "build.log". Then "cd i686-pc-mingw32". Up to this point, we
-have executed until the following command at line 154 in "build.log":
+The last step above is to really "make install". Then Crtl-C to break out
+from the process. Open the "build.log". Then "cd i686-pc-mingw32". Up to
+this point, we have executed until the following command at line 154 in
+"build.log":
   C:/ProgramFiles_x86/Git/bin/sh.exe ./libtool  --tag=CC   --mode=link c:/MinGW/bin/gcc.exe  -O3 -fomit-frame-pointer -fstrict-aliasing -ffast-math -march=core2  -Wall -fexceptions -no-undefined -version-info `grep -v '^#' ../libtool-version`  -no-undefined -bindir "c:/Vennie/Projects/C/libffi-3.1/result/bin"  -o libffi.la -rpath c:/Vennie/Projects/C/libffi-3.1/result/lib src/prep_cif.lo src/types.lo src/raw_api.lo src/java_raw_api.lo src/closures.lo      src/x86/ffi.lo src/x86/win32.lo
 
-So cut and paste all the commands starting from that line. Take note that you
-have to execute one command at a time. The commands are separated by ":". Make
-sure each command executes without error.
+So cut and paste all the commands starting from that line. Take note that
+you have to execute one command at a time. The commands are separated by
+":". Make sure each command executes without error.
 
 Once you have finished (exclude running make[3]:...). You have the library
 installed in "result" folder.
@@ -47,7 +49,7 @@ Writing First Program using LibFFI
 Then create "PutFFI.c" file in /result folder:
 
   #include <stdio.h>
-  #include "lib/libffi-3.1/include/ffi.h"
+  #include <ffi.h>
 
   int main() {
     ffi_cif cif;
@@ -73,34 +75,17 @@ Then create "PutFFI.c" file in /result folder:
     return 0;
   }
 
-The program is taken from the LibFFI documentation with modifications.
-The include path to "ffi.h" has been modified to reflect where it is,
-relative to where PutFFI.c is located. FFI_FN() macro is used to cast
-the function address to proper type to suppress warnings.
+The program is taken from the LibFFI documentation with a modification.
+The FFI_FN() macro is used to cast the function address to proper type to
+suppress warnings.
 
 Create "compile_n_run_it" file /result folder:
 
   #! /bin/sh
-  gcc -o bin/PutFFI.exe ./PutFFI.c -llibffi -Llib
+  gcc -o bin/PutFFI.exe ./PutFFI.c -llibffi -Llib -Ilib/libffi-3.1/include
   ./bin/PutFFI.exe
 
-After running "compile_n_run_it", you will see the following error:
-
-  In file included from ./PutFFI.c:2:0:
-  ./lib/libffi-3.1/include/ffi.h:67:23: fatal error: ffitarget.h: No such file or
-  directory
-   #include <ffitarget.h>
-                         ^
-  compilation terminated.
-  ./compile_n_run_it: line 3: ./bin/PutFFI.exe: No such file or directory
-
-You have to change (at the location specified) from
-  #include <ffitarget.h>
-
-to
-  #include "ffitarget.h"
-
-If "compile_n_run_it" is issued again, the following output should be
+Issue "compile_n_run_it" and the following output should be
 printed on the console:
   Hello World!
   This is cool!

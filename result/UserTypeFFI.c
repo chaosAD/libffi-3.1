@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "lib/libffi-3.1/include/ffi.h"
+#include <ffi.h>
 
 #define DELTA 0.0000001
 

@@ -64,7 +64,7 @@ extern "C" {
 
 /* ---- System configuration information --------------------------------- */
 
-#include "ffitarget.h"
+#include <ffitarget.h>
 
 #ifndef LIBFFI_ASM
 
@@ -350,8 +350,8 @@ typedef struct {
 
 #if !FFI_NATIVE_RAW_API
 
-  /* if this is enabled, then a raw closure has the same layout
-     as a regular closure.  We use this to install an intermediate
+  /* if this is enabled, then a raw closure has the same layout 
+     as a regular closure.  We use this to install an intermediate 
      handler to do the transaltion, void** -> ffi_raw*. */
 
   void     (*translate_args)(ffi_cif*,void*,void**,void*);
@@ -376,8 +376,8 @@ typedef struct {
 
 #if !FFI_NATIVE_RAW_API
 
-  /* if this is enabled, then a raw closure has the same layout
-     as a regular closure.  We use this to install an intermediate
+  /* if this is enabled, then a raw closure has the same layout 
+     as a regular closure.  We use this to install an intermediate 
      handler to do the transaltion, void** -> ffi_raw*. */
 
   void     (*translate_args)(ffi_cif*,void*,void**,void*);
@@ -446,18 +446,18 @@ void ffi_call(ffi_cif *cif,
 #endif
 
 /* If these change, update src/mips/ffitarget.h. */
-#define FFI_TYPE_VOID       0
+#define FFI_TYPE_VOID       0    
 #define FFI_TYPE_INT        1
-#define FFI_TYPE_FLOAT      2
+#define FFI_TYPE_FLOAT      2    
 #define FFI_TYPE_DOUBLE     3
 #if 1
 #define FFI_TYPE_LONGDOUBLE 4
 #else
 #define FFI_TYPE_LONGDOUBLE FFI_TYPE_DOUBLE
 #endif
-#define FFI_TYPE_UINT8      5
+#define FFI_TYPE_UINT8      5   
 #define FFI_TYPE_SINT8      6
-#define FFI_TYPE_UINT16     7
+#define FFI_TYPE_UINT16     7 
 #define FFI_TYPE_SINT16     8
 #define FFI_TYPE_UINT32     9
 #define FFI_TYPE_SINT32     10
